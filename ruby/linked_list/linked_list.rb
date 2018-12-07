@@ -59,4 +59,14 @@ class LinkedList
       end
     end
   end
+
+  def insert_first(new_element)
+    insert(new_element, 1)
+  end
+
+  def delete_first
+    target = get_position(1)
+    delete(target.value) if target
+    target
+  end
 end

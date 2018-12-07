@@ -31,5 +31,13 @@ class LinkedListTest(unittest.TestCase):
         self.assertEqual(self.ll.get_position(2).value, 4)
         self.assertEqual(self.ll.get_position(3).value, 3)
 
+    def test_insert_first(self):
+        self.ll.insert_first(self.e4)
+        self.assertEqual(self.ll.get_position(1).value, 4)
+
+
+    def test_delete_first(self):
+        self.assertEqual(self.ll.delete_first().value, 1)
+
 if __name__ == '__main__':
     unittest.main()

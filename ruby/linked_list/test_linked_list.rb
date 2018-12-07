@@ -35,4 +35,14 @@ class TestLinkedList < Test::Unit::TestCase
     @ll.delete(4)
     assert_equal(3, @ll.get_position(2).value)
   end
+
+  def test_insert_first
+    @ll.insert_first(@e4)
+    assert_equal(4, @ll.get_position(1).value)
+  end
+
+  def test_delete_first
+    @ll.insert_first(@e4)
+    assert_equal(4, @ll.delete_first.value)
+  end
 end

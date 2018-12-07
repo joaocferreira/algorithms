@@ -44,3 +44,13 @@ class LinkedList(object):
             else:
                 current = current.next
         pass
+
+    def insert_first(self, new_element):
+        self.insert(new_element, 1)
+        pass
+
+    def delete_first(self):
+        target = self.get_position(1)
+        if target:
+            self.delete(target.value)
+        return target
